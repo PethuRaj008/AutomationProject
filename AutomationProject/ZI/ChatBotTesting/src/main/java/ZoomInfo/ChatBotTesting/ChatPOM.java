@@ -120,6 +120,10 @@ public class ChatPOM extends BaseFunctions{
 	
 	
 	By requestForEmail=By.xpath("//div[contains(text(),'Please enter your email')]");
+	String headerTextChat="Zoominfo";
+	String headerDesc="You are chatting with Test bot";
+	String displayText="Please enter your email address to assist you further!";
+	
 	public String[] textMessageInInitialScreen()
 	{
 		welcomeText.click();
@@ -141,7 +145,9 @@ public class ChatPOM extends BaseFunctions{
 		return errorMessage.getText();
 	}
 	
-	By thanksTextForEmail=By.xpath("//div[contains(text(),'Thanks for providing your email')]");
+	By thanksTextForEmail=By.xpath("//div[contains(text(),'Now give us your First')]");
+	String textValue ="Thanks for providing your email address.";
+	String nameReq="Now give us your First name please";
 	public String[] validEmail(String email)
 	{
 		visibilityOfElement(emailInputField);
@@ -157,6 +163,7 @@ public class ChatPOM extends BaseFunctions{
 	
 	By nameInputField = By.xpath("//input[@name='plain']");
 	By reuestForCountry = By.xpath("//div[contains(text(),'Please select your country')]");
+	String countryReq="Please select your country from the below given options";
 	public String getTextAfterFirstName(String name)
 	{
 		visibilityOfElement(nameInputField);
@@ -168,11 +175,10 @@ public class ChatPOM extends BaseFunctions{
 	
 	By country = By.xpath("//div[contains(text(),'India')]");
 	By afterCountrySubmit = By.xpath("//div[contains(text(),'Thank you for sharing the details')]");
-	public String finalTextAfterCountryDetail(String name)
+	public String finalTextAfterCountryDetail()
 	{
 		visibilityOfElement(country);
 		countryIndia.click();
-		sendButtonClick.click();
 		visibilityOfElement(afterCountrySubmit);
 		return detailsSharedText.getText();
 	}
@@ -205,6 +211,9 @@ public class ChatPOM extends BaseFunctions{
 	}
 	
 	By headline = By.xpath("//h4[contains(text(),'Hi')]");
+	String headlineHome="Hi, we're Zoominfo";
+	String paraText="How can we test the bot today?";
+	String convText="Your Conversations";
 	public String[] verifyContentInMainScreen()
 	{
 		backNavigationButton.click();
@@ -216,6 +225,7 @@ public class ChatPOM extends BaseFunctions{
 		return home;
 	}
 	
+	String files1="All Files";
 	public String allFilesNavigation()
 	{
 		menuIcon.click();
@@ -224,6 +234,7 @@ public class ChatPOM extends BaseFunctions{
 	}
 	
 	By headerText = By.xpath("//div[@class='sc-qrIAp dfnBSA']");
+	String headerTextZoom="You are chatting with Test bot";
 	public String openFirstConversation()
 	{
 		backNavigationButton.click();

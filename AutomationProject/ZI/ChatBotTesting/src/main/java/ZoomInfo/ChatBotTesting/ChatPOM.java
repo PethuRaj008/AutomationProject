@@ -175,7 +175,7 @@ public class ChatPOM extends BaseFunctions{
 	
 	By country = By.xpath("//div[contains(text(),'India')]");
 	By afterCountrySubmit = By.xpath("//div[contains(text(),'Thank you for sharing the details')]");
-	public String finalTextAfterCountryDetail()
+	public String finalTextAfterCountryDetail() throws InterruptedException
 	{
 		visibilityOfElement(country);
 		countryIndia.click();
@@ -200,7 +200,7 @@ public class ChatPOM extends BaseFunctions{
 	
 	String newURL="https://www.google.com/";
 	public void launchNewTabAndSwitchToFrame() throws InterruptedException
-	{
+	{   
 		driver.switchTo().defaultContent();
 		String parentWindow = driver.getWindowHandle();
 		driver. switchTo(). newWindow(WindowType. TAB);
@@ -217,7 +217,7 @@ public class ChatPOM extends BaseFunctions{
 	public String[] verifyContentInMainScreen()
 	{
 		backNavigationButton.click();
-		visibilityOfElement(afterCountrySubmit);
+		visibilityOfElement(headline);
 		String[] home = new String[3];
 		home[0]=historyPageHeadingText.getText();
 		home[1]=historyPageParaText.getText();

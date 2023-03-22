@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,6 +17,7 @@ public class ChatPOM extends BaseFunctions{
 	WebDriver driver;
 	
 	public ChatPOM(WebDriver driver) {
+		
 		super(driver);
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
@@ -188,5 +190,50 @@ public class ChatPOM extends BaseFunctions{
 	public void maximizeChat()
 	{
 		maximizeChat.click();
+	}
+	
+	String newURL="https://www.google.com/";
+	public void launchNewTabAndSwitchToFrame() throws InterruptedException
+	{
+		driver.switchTo().defaultContent();
+		String parentWindow = driver.getWindowHandle();
+		driver. switchTo(). newWindow(WindowType. TAB);
+		driver.get(newURL);
+		Thread.sleep(10000);
+		driver.switchTo().window(parentWindow);
+		driver.switchTo().frame(frameId);
+	}
+	
+	By headline = By.xpath("//h4[contains(text(),'Hi')]");
+	public String[] verifyContentInMainScreen()
+	{
+		backNavigationButton.click();
+		visibilityOfElement(afterCountrySubmit);
+		String[] home = new String[3];
+		home[0]=historyPageHeadingText.getText();
+		home[1]=historyPageParaText.getText();
+		home[2]=historyPageConversationText.getText();
+		return home;
+	}
+	
+	public String allFilesNavigation()
+	{
+		menuIcon.click();
+		allFiles.click();
+		return allFilesPageText.getText();
+	}
+	
+	By headerText = By.xpath("//div[@class='sc-qrIAp dfnBSA']");
+	public String openFirstConversation()
+	{
+		backNavigationButton.click();
+		openFirstConversation.click();
+		visibilityOfElement(headerText);
+		return headerMessage.getText();
+	}
+	
+	public void browserQuit()
+	{
+		driver.quit();
 	}
 }

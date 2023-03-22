@@ -25,6 +25,7 @@ public class ZoomInfoChatHomePOM {
 		//WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
+		System.out.println(driver);
 		ChatPOM objectForPOM= new ChatPOM(driver); 
 		objectForPOM.goTo();
 		//driver.get("https://insent-staging10.firebaseapp.com/fe-assignment");

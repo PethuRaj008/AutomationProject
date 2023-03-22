@@ -10,10 +10,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BaseFunctions {
 	
 	WebDriver driver;
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	WebDriverWait wait;
 
 	public BaseFunctions(WebDriver driver) {
 		this.driver =driver;
+		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		
 	}
 	

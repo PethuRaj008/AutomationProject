@@ -15,8 +15,6 @@ public class StepDefinitionChatBox extends BaseTest
 	@Given("^Browser is launched and website is opened$")
     public void browser_is_launched() throws Throwable {
 		chatPOM=initializaBrowser();
-		
-        
     }
 
     @Given("^Chat bot is available$")

@@ -94,5 +94,10 @@ public class StepDefinitionChatBox extends BaseTest
     	String headingZoom=chatPOM.openFirstConversation();
     	Assert.assertEquals(headingZoom,chatPOM.headerTextZoom);
     }
-
+    
+    @And("^error message (.+) is displayed for email (.+)$")
+    public void error_message_is_displayed_for_email(String error, String firstname1) throws Throwable {
+        String actualError=chatPOM.emailErrorMessage(firstname1);
+        Assert.assertEquals(error,actualError);
+    }
 }

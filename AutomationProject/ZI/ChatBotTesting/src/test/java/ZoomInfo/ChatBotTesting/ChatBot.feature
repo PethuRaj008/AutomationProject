@@ -24,7 +24,8 @@ Feature: Chat bot intraction with user
   Scenario Outline: Explore chat bot with all possible flow
     Given Chat bot is available with text <chat>
     When All the text in chat bot frame is displayed
-    And I entered user data like <email>, <firstname>
+    And error message <error> is displayed for email <firstname1>
+    And I entered user data like <email1>, <firstname1>
     Then select location and verify the reply <text>
     And restart conversation
     And minimize the chat bot
@@ -36,7 +37,9 @@ Feature: Chat bot intraction with user
     And quit the browser
 
     Examples: 
-      | email  							   | firstname |chat											    | text																																	|
-      | pethu.r@tick.com       | Raj       |Welcome to ZoomInfo Chat!     | Thank you for sharing the details! We will get back to you shortly.	  |
+      | email1  							   |error																|firstname1 |chat											    | text																																	|
+      | pethu.r@tick.com         |Please enter a valid email address. |Raj        |Welcome to ZoomInfo Chat!    | Thank you for sharing the details! We will get back to you shortly.	  |
+    
+    
     
     

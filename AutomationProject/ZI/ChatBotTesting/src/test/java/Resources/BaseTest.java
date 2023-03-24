@@ -3,11 +3,13 @@ package Resources;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import ZoomInfo.ChatBotTesting.ChatPOM;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Properties;
 
 public class BaseTest 
@@ -27,8 +29,10 @@ public class BaseTest
 	System.setProperty("webdriver.http.factory", "jdk-http-client");
 	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Raj\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	//WebDriverManager.chromedriver().setup();
-	driver=new ChromeDriver();
-	
+	//driver=new ChromeDriver();
+	ChromeOptions options = new ChromeOptions();
+	options.addArguments("--incognito");
+	 driver=new ChromeDriver(options);
 	}
 	else if (browser.equalsIgnoreCase("edge"))
 	{

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-23T04:26:34 IST" name="Default suite" finished-at="2023-03-23T04:28:18 IST" duration-ms="104058">
+  <suite started-at="2023-03-24T18:51:29 IST" name="Default suite" finished-at="2023-03-24T18:52:52 IST" duration-ms="82672">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:ZoomInfo.ChatBotTesting.TestRunner@7e057f43]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-03-23T04:26:34 IST" name="Default test" finished-at="2023-03-23T04:28:18 IST" duration-ms="104058">
+    <test started-at="2023-03-24T18:51:29 IST" name="Default test" finished-at="2023-03-24T18:52:52 IST" duration-ms="82672">
       <class name="ZoomInfo.ChatBotTesting.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:ZoomInfo.ChatBotTesting.TestRunner@7e057f43]" started-at="2023-03-23T04:26:34 IST" name="setUpClass" finished-at="2023-03-23T04:26:36 IST" duration-ms="1598" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:ZoomInfo.ChatBotTesting.TestRunner@7e057f43]" started-at="2023-03-24T18:51:29 IST" name="setUpClass" finished-at="2023-03-24T18:51:31 IST" duration-ms="1659" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@61d6c8c4]]>
+                <![CDATA[org.testng.TestRunner@21a9f95b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:ZoomInfo.ChatBotTesting.TestRunner@7e057f43]" started-at="2023-03-23T04:26:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-23T04:27:17 IST" duration-ms="41599" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:ZoomInfo.ChatBotTesting.TestRunner@7e057f43]" started-at="2023-03-24T18:51:31 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-24T18:52:31 IST" duration-ms="59483" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,26 +34,35 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@id='insent-popup-content'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.5.3', revision: '4b786a1e430'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.110, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\Raj\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:49885}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49885/devtoo..., se:cdpVersion: 111.0.5563.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 99d8f19b3472b78fc53aacbb4389b07b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@id='insent-popup-content'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.5.3', revision: '4b786a1e430'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.110, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\Raj\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:49885}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49885/devtoo..., se:cdpVersion: 111.0.5563.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 99d8f19b3472b78fc53aacbb4389b07b
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at ZoomInfo.ChatBotTesting.BaseFunctions.visibilityOfElement(BaseFunctions.java:23)
+at ZoomInfo.ChatBotTesting.ChatPOM.welcomeTextInChatBot(ChatPOM.java:117)
+at ZoomInfo.ChatBotTesting.StepDefinitionChatBox.chat_bot_is_available_with_text(StepDefinitionChatBox.java:22)
+at ✽.Chat bot is available with text Welcome to ZoomInfo Chat!(file:///C:/Users/Raj/Documents/AutomationProject/ZI/ChatBotTesting/src/test/java/ZoomInfo/ChatBotTesting/ChatBot.feature:11)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:ZoomInfo.ChatBotTesting.TestRunner@7e057f43]" started-at="2023-03-23T04:27:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-23T04:28:12 IST" duration-ms="54185" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Explore chat bot with all possible flow"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Chat bot intraction with user"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:ZoomInfo.ChatBotTesting.TestRunner@7e057f43]" started-at="2023-03-23T04:28:12 IST" name="tearDownClass" finished-at="2023-03-23T04:28:18 IST" duration-ms="6571" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:ZoomInfo.ChatBotTesting.TestRunner@7e057f43]" started-at="2023-03-24T18:52:31 IST" name="tearDownClass" finished-at="2023-03-24T18:52:52 IST" duration-ms="21431" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
